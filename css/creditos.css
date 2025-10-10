@@ -41,14 +41,6 @@ header p {
     color: #d0d0d0;
 }
 
-.menu-navegacao ul {
-    list-style-type: none;
-}
-
-.menu-navegacao li {
-    margin: 15px 0;
-}
-
 .menu-botao {
     display: block;
     width: 300px;
@@ -72,29 +64,6 @@ header p {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brilho ciano */
 }
 
-#creditos {
-    display: block;
-    width: 300px;
-    padding: 15px 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #ffd900; /* Borda branca, como as linhas do projeto */
-    color: #ffd900;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-#creditos:hover {
-    background-color: #ffffff; /* Fundo branco ao passar o mouse */
-    color: #0b2f5b; /* Texto com a cor do fundo */
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brilho ciano */
-}
-
 #retornar {
     display: block;
     width: 300px;
@@ -106,7 +75,6 @@ header p {
     font-size: 1.1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
-
     opacity: 0;
     transform: translateY(20px);
 }
