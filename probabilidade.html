@@ -11,7 +11,132 @@
         <h1>Probabilidade</h1>
     </header>
     <main>
+        <div class="content">
+            <h2>O que é probabilidade?</h2>
+            <p>Probabilidade é uma medida numérica da chance de um evento ocorrer, variando de 0 (impossível) a 1 (certo) ou de 0% a 100%. Ela quantifica a incerteza de forma objetiva e é fundamental em diversas áreas, como estatística, jogos de azar, finanças, medicina, inteligência artificial, meteorologia e ciências em geral. Intuitivamente, quanto mais próximo de 1, maior a certeza de que o evento acontecerá; quanto mais próximo de 0, menor a chance. A probabilidade pode ser calculada de diferentes formas dependendo do contexto: dividindo o número de resultados favoráveis pelo número total de resultados possíveis (em casos equiprováveis), usando dados experimentais repetidos ou até mesmo com base em crenças subjetivas atualizadas por novas evidências. Esse conceito permite tomar decisões informadas em situações de risco e incerteza.</p>
+        </div>
+        <div class="content">
+            <h2>Tipos e como calcular</h2>
+                <h3>Probabilidade Clássica</h3>
+                    <p>Usada quando todos os resultados possíveis são igualmente prováveis (como em um dado justo ou uma moeda honesta). Esse tipo é também chamado de *a priori* ou laplaciana, pois não depende de experimentos — basta conhecer o espaço amostral. A fórmula é: </p>
+                    <p id="formula">P(A) = Número de resultados favoráveis / Número total de resultados possíveis.</p>
+                    <p><strong>Exemplo:</strong> Ao lançar um dado de 6 faces, a probabilidade de sair um número par é: par = 3/6 = 0,5 (ou 50%), pois há 3 números pares (2, 4, 6) entre 6 possíveis.</p>
+                <h3>Probabilidade Empírica</h3>
+                    <p>Baseada em dados históricos ou experimentais reais, também conhecida como frequentista. Aqui, a probabilidade é estimada pela frequência relativa com que o evento ocorre ao repetir o experimento muitas vezes. Quanto maior o número de repetições, mais próxima a estimativa fica do valor "verdadeiro" (Lei dos Grandes Números). A fórmula é: </p>
+                    <p id="formula">P(A) = Número de vezes que o evento ocorreu / Número total de experimentos realizados.</p>
+                    <p><strong>Exemplo:</strong> Em 1.000 lançamentos de uma moeda, cara saiu 512 vezes. Então, cara = 512/1000 = 0,512 (51,2%). Com mais lançamentos, esse valor tende a se aproximar de 0,5.</p>
+                <h3>Probabilidade Condicional</h3>
+                    <p>Refere-se à probabilidade de um evento A ocorrer dado que outro evento B já ocorreu. É escrita como P(A|B) e lê-se "probabilidade de A dado B". Esse tipo é essencial em diagnósticos médicos, análise de risco e aprendizado de máquina. A fórmula é: </p>
+                    <p id="formula">P(A|B) = P(A e B) / P(B), desde que P(B) > 0.</p>
+                    <p><strong>Exemplo:</strong> Em uma escola, 60% dos alunos são meninas (B) e 30% são meninas que gostam de matemática (A e B). A probabilidade de uma aluna gostar de matemática, dado que ela é menina, é: P(A|B) = 0,30 / 0,60 = 0,5 (50%).</p>
+        </div>
+                <!-- ====================== MOEDA ====================== -->
+        <div class="calc">
+            <h2>Moeda (Cara ou Coroa)</h2>
+            <label>Nº de lançamentos:</label>
+            <input type="number" id="coin-n" min="1" value="1"><br>
 
+            <label>Desejo exatamente:</label>
+            <input type="number" id="coin-k" min="0" value="1"><br>
+
+            <label>Tipo:</label>
+            <select id="coin-type">
+                <option value="cara">Cara</option>
+                <option value="coroa">Coroa</option>
+            </select><br>
+
+            <button onclick="calcCoin()">Calcular</button>
+            <div class="result" id="coin-result"></div>
+        </div>
+
+        <!-- ====================== DADO ====================== -->
+        <div class="calc">
+            <h2>Dado(s)</h2>
+            <label>Nº de dados:</label>
+            <input type="number" id="dice-num" min="1" value="1"><br>
+
+            <label>Faces por dado:</label>
+            <input type="number" id="dice-faces" min="2" value="6"><br>
+
+            <label>Soma desejada:</label>
+            <input type="number" id="dice-sum" min="1" value="7"><br>
+
+            <button onclick="calcDice()">Calcular P(soma)</button>
+            <div class="result" id="dice-result"></div>
+            <p class="note">Funciona até 5 dados (para mais, use simulação).</p>
+        </div>
+
+        <!-- ====================== BARALHO ====================== -->
+        <div class="calc">
+            <h2>Baralho (52 cartas)</h2>
+            <label>Cartas tiradas:</label>
+            <input type="number" id="card-n" min="1" max="52" value="5"><br>
+
+            <label>Desejo exatamente:</label>
+            <input type="number" id="card-k" min="0" value="2"><br>
+
+            <label>Tipo de carta:</label>
+            <select id="card-type">
+                <option value="as">Ás (4)</option>
+                <option value="rei">Rei (4)</option>
+                <option value="dama">Dama (4)</option>
+                <option value="valete">Valete (4)</option>
+                <option value="naipe">Mesmo naipe (13)</option>
+            </select><br>
+
+            <label>Com reposição?</label>
+            <input type="checkbox" id="card-repo"><br>
+
+            <button onclick="calcCard()">Calcular</button>
+            <div class="result" id="card-result"></div>
+        </div>
+
+        <!-- ====================== ROLETA ====================== -->
+        <div class="calc">
+            <h2>Roleta</h2>
+            <label>Tipo:</label>
+            <select id="roulette-type">
+                <option value="eu">Europeia (37)</option>
+                <option value="us">Americana (38)</option>
+            </select><br>
+
+            <label>Aposta em:</label>
+            <select id="roulette-bet">
+                <option value="single">Número único (1)</option>
+                <option value="red">Vermelho (18)</option>
+                <option value="black">Preto (18)</option>
+                <option value="even">Par (18)</option>
+                <option value="odd">Ímpar (18)</option>
+                <option value="low">Baixa 1-18 (18)</option>
+                <option value="high">Alta 19-36 (18)</option>
+            </select><br>
+
+            <button onclick="calcRoulette()">Calcular</button>
+            <div class="result" id="roulette-result"></div>
+        </div>
+
+        <!-- ====================== URNA ====================== -->
+        <div class="calc">
+            <h2>Urna / Bolas</h2>
+            <label>Total de bolas:</label>
+            <input type="number" id="urn-total" min="1" value="10"><br>
+
+            <label>Bolas favoráveis:</label>
+            <input type="number" id="urn-fav" min="0" value="3"><br>
+
+            <label>Extrações:</label>
+            <input type="number" id="urn-draw" min="1" value="2"><br>
+
+            <label>Com reposição?</label>
+            <input type="checkbox" id="urn-repo"><br>
+
+            <label>Desejo exatamente:</label>
+            <input type="number" id="urn-k" min="0" value="1"><br>
+
+            <button onclick="calcUrn()">Calcular</button>
+            <div class="result" id="urn-result"></div>
+        </div>
+    </div>
     </main>
     <footer>
         <a href="index.html" id="retornar">Retornar</a>

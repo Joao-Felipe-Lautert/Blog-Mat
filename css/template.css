@@ -33,6 +33,7 @@ header h1 {
     font-weight: 700;
     color: #00ffff; /* Ciano vivo, cor de destaque */
     margin-bottom: 10px;
+    text-shadow: 0 0 25px rgba(0, 255, 255, 0.6); /* Brilho ciano */
 }
 
 header p {
@@ -41,15 +42,42 @@ header p {
     color: #d0d0d0;
 }
 
-.menu-navegacao ul {
-    list-style-type: none;
+.content {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #0b2f5b;
+    border-radius: 8px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 80%;
 }
 
-.menu-navegacao li {
-    margin: 15px 0;
+main h2 {
+    color: #ffd900;
+    margin-bottom: 15px;
 }
 
-.menu-botao {
+.content h2 {
+    text-shadow: 0 0 25px rgba(255, 217, 0, 0.6); /* Brilho ciano */
+}
+
+main h3 {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #00ffff
+}
+
+main p {
+    width: 80%;
+    text-align: justify;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#retornar {
     display: block;
     width: 300px;
     padding: 15px 20px;
@@ -60,35 +88,11 @@ header p {
     font-size: 1.1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
-
     opacity: 0;
     transform: translateY(20px);
 }
 
-.menu-botao:hover {
-    background-color: #ffffff; /* Fundo branco ao passar o mouse */
-    color: #0b2f5b; /* Texto com a cor do fundo */
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brilho ciano */
-}
-
-#creditos {
-    display: block;
-    width: 300px;
-    padding: 15px 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #ffd900; /* Borda branca, como as linhas do projeto */
-    color: #ffd900;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-#creditos:hover {
+#retornar:hover {
     background-color: #ffffff; /* Fundo branco ao passar o mouse */
     color: #0b2f5b; /* Texto com a cor do fundo */
     transform: scale(1.05);
@@ -96,7 +100,6 @@ header p {
 }
 
 footer {
-    position: absolute;
     bottom: 20px;
     font-size: 0.9rem;
     color: #a0a0a0;
