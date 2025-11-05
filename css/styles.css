@@ -33,12 +33,14 @@ header h1 {
     font-weight: 700;
     color: #00ffff; /* Ciano vivo, cor de destaque */
     margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Brilho ciano */
 }
 
 header p {
     font-size: 1.2rem;
     font-weight: 300;
-    color: #d0d0d0;
+    color: ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .menu-navegacao ul {
@@ -96,7 +98,7 @@ header p {
 }
 
 footer {
-    position: absolute;
+    margin-top: 60px;
     bottom: 20px;
     font-size: 0.9rem;
     color: #a0a0a0;
