@@ -98,6 +98,7 @@ header p {
 }
 
 footer {
+    position: absolute;
     margin-top: 60px;
     bottom: 20px;
     font-size: 0.9rem;
