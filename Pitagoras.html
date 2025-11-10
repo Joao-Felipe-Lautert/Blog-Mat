@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="imagens/icone.ico">
     <link rel="stylesheet" href="css/Pitagoras.css">
-    <title>Document</title>
+    <title>Teorema de Pitágoras</title>
 </head>
 <body>
     <header>
@@ -26,17 +26,20 @@
         </div>
         <div class="calc">
             <h2>Calculadora do Teorema de Pitágoras</h2>
-            <label>Cateto a:</label>
-            <input type="number" id="cateto-a" min="0" value="0"><br>
-
-            <label>Cateto b:</label>
-            <input type="number" id="cateto-b" min="0" value="0"><br>
-
-            <label>Hipotenusa c:</label>
-            <input type="number" id="hipotenusa-c" min="0" value="0"><br>
-
-            <button onclick="calcPythagoras()">Calcular</button>
-            <div class="result" id="pythagoras-result"></div>
+            <div class="input-field">
+                <label>Cateto a:</label>
+                <input type="number" id="cateto-a" min="0" value="0"><br>
+            </div>
+            <div class="input-field">
+                <label>Cateto b:</label>
+                <input type="number" id="cateto-b" min="0" value="0"><br>
+            </div>
+            <div class="calc-button">
+                <button onclick="calcPythagoras()" id="calcular">Calcular</button>
+                <button onclick="clearPythagoras()" id="limpar">Limpar</button>
+                <div class="result" id="pythagoras-result"></div>
+            </div>
+        </div>
     </main>
     <footer>
         <a href="index.html" id="retornar">Retornar</a>

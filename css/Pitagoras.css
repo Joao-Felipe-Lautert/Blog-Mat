@@ -77,6 +77,77 @@ main p {
     margin-bottom: 30px;
 }
 
+.calc {
+    display: grid;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #0b2f5b;
+    border-radius: 8px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.result {
+    font-size: 1.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 25px rgba(0, 255, 255, 0.6); /* Brilho ciano */
+}
+
+#calcular{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calcular:hover{
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brilho ciano */
+}
+
+#limpar {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffd900;
+    color: #ffd900;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ #limpar:hover {
+    box-shadow: 0 0 15px rgba(255, 217, 0, 0.6); /* Brilho ciano */
+};
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.input-field input {
+    padding: 10px;
+    border: 1px solid #ffd900;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+label {
+    font-weight: 600;
+    color: #ffffff;
+}
+
 #retornar {
     display: block;
     width: 300px;
@@ -98,7 +169,6 @@ main p {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Brilho ciano */
 }
-
 
 footer {
     bottom: 20px;
